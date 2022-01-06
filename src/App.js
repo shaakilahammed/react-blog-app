@@ -1,19 +1,19 @@
 import React from 'react';
-import { Routes, Route, Link, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+import './App.css';
 import Blog from './pages/Blog';
 import Home from './pages/Home';
 
-const App = () => {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
-};
+const App = () => (
+  <div className="container">
+    <BrowserRouter>
+      <Routes>
+        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+);
 
 export default App;
