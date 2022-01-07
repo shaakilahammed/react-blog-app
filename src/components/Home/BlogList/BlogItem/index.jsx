@@ -14,7 +14,6 @@ const BlogItem = ({
     cover,
   },
 }) => {
-  console.log(cover);
   return (
     <div className="blogItem-wrap">
       <img src={cover} alt="cover" className="blogItem-cover" />
